@@ -2,7 +2,7 @@
     "name": "jsIdea",
     "version": "0.0.1",
     "descript": "Prove of concept for fully javascript project",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "start": "node index.js"
     },
