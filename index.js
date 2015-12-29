@@ -14,17 +14,40 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+var buffer = {
+    loggedIn: false
+};
+
 var checkAuth = function (request, response, next) {
     console.log("Checking auth for " + request.path + " ...");
-    next();
+    // Note: This is a bad practice. Just for trying before I learn session
+    if(buffer.loggedIn) {
+        next();
+    } else {
+        response.status(403);
+        response.end();
+    }
 }
+
+app.get("/login/", function (request, response) {
+    buffer.loggedIn = true;
+    response.send("Done");
+});
+
+app.get("/logout/", function (request, response) {
+    buffer.loggedIn = false;
+    response.send("Done");
+});
 
 // All the request with path start from /api/ will run checkAuth
 app.get(/^\/api\//, checkAuth);
 
 app.get('/api/user', function (request, response) {
     response.send("Calling user API");
-    
+});
+
+app.get('/api/user/:id', function (request, response) {
+    response.send("Reading user " + request.params.id);
 });
 
 app.listen(app.get('port'), function() {
