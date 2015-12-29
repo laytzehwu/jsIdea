@@ -14,6 +14,19 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+var checkAuth = function (request, response, next) {
+    console.log("Checking auth for " + request.path + " ...");
+    next();
+}
+
+// All the request with path start from /api/ will run checkAuth
+app.get(/^\/api\//, checkAuth);
+
+app.get('/api/user', function (request, response) {
+    response.send("Calling user API");
+    
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
