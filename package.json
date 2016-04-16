@@ -1,26 +1,31 @@
 {
-    "name": "jsIdea",
-    "version": "0.0.1",
-    "descript": "Prove of concept for fully javascript project",
-    "main": "app.js",
-    "scripts": {
-        "start": "node index.js"
-    },
-    "dependencies": {
-        "ejs": "2.3.3",
-        "express": "4.13.3"
-    },
-    "engines": {
-        "node": "0.12.7"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/laytzehwu/jsIdea.git"
-    },
-    "keywords": [
-        "node",
-        "heroku",
-        "express"
-    ],
-    "license": "MIT"
+  "name": "jsIdea",
+  "version": "0.0.1",
+  "descript": "Prove of concept for fully javascript project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.3.3",
+    "express": "4.13.3"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laytzehwu/jsIdea.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.5.3",
+    "angular-ui-router": "^0.2.18",
+    "express": "^4.13.3"
+  }
 }

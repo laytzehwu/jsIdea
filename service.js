@@ -17,8 +17,8 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/login/', authModule.login);
-app.get('/logout/', authModule.logout);
+app.get('/api/login/', authModule.login);
+app.get('/api/logout/', authModule.logout);
 
 // All the request with path start from /api/ will run checkAuth
 app.get(/^\/api\//, authModule.checkAuth);
