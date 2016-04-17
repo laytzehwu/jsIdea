@@ -18,3 +18,26 @@ app.config(($stateProvider, $urlRouterProvider) => {
             templateUrl: "html/login.html"
         });
 });
+
+var LoginController = function ($scope) {
+    $scope.email = 'laytzehwu@yahoo.com';
+    $scope.password = '';
+    var $form = $('form#loginForm');
+    $scope.doSubmit = function () {
+        console.log('Submitting ...');
+        console.log($scope);
+    }
+    $scope.onSubmit = function () {
+        if($form.valid()) {
+            var data = {
+                email: $scope.email,
+                password: $scope.password
+            };
+            console.log(data);
+        }        
+    }
+    $form.validate();
+   console.log('LoginController is fired');
+};
+
+app.controller('LoginController', LoginController);

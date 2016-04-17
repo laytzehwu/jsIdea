@@ -8,14 +8,9 @@ let gulp = require('gulp'),
 let config = require('../config');
 
 gulp.task('static-javascript-vender', () => {
-   //return gulp.src(config.vender)
-   return gulp.src([
-       './node_modules/angular/angular.min.js',
-       './node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
-       './node_modules/angular-ui-router/release/angular-ui-router.min.js'
-   ])
+   return gulp.src(config.vender)
        .pipe(concat('vender.js', {newLine:'\n'}))
-       .pipe(uglify())
+       //.pipe(uglify())
        .pipe(gulp.dest(config.build + '/js'));
 });
 
