@@ -2,6 +2,6 @@
 
 let gulp = require('gulp');
 
-gulp.task('dev', ['clean','style'], () => {
+gulp.task('dev', ['clean','style', 'html', 'static-javascript'], () => {
     
 });

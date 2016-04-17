@@ -7,7 +7,7 @@ var authModule = require('./modules/auth');
 app.set('port', (process.env.PORT || 5000));
 
 // Static folder
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/build'));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
