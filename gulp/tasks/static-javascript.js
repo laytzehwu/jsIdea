@@ -10,7 +10,7 @@ let config = require('../config');
 gulp.task('static-javascript-vender', () => {
    return gulp.src(config.vender)
        .pipe(concat('vender.js', {newLine:'\n'}))
-       //.pipe(uglify())
+       .pipe(uglify())
        .pipe(gulp.dest(config.build + '/js'));
 });
 
@@ -20,8 +20,10 @@ gulp.task('cp-angular', () => {
         .pipe(gulp.dest(config.build + '/js'));
 });
 
-gulp.task('static-javascript', ['static-javascript-vender'], () => {
+gulp.task('static-js-source', () => {
     return gulp.src([config.staticJavaScript + '/**/*.js'])
         //.pipe(uglify())
         .pipe(gulp.dest(config.build + '/js'));
 });
+
+gulp.task('static-javascript', gulp.parallel('static-javascript-vender', 'static-js-source'));

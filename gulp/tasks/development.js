@@ -2,6 +2,4 @@
 
 let gulp = require('gulp');
 
-gulp.task('dev', ['clean','style', 'html', 'static-javascript'], () => {
-    
-});
+gulp.task('dev', gulp.series('clean', gulp.parallel('style', 'html', 'static-javascript')));
