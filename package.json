@@ -37,7 +37,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^5.0.0",
     "gulp-uglify": "^1.5.3",
-    "jquery": "^2.2.3",
+    "jquery": "^3.5.0",
     "jquery-validation": "^1.15.0",
     "node-sass": "^4.13.1"
   }
