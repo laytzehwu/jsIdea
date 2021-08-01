@@ -36,9 +36,9 @@
     "gulp-concat": "^2.6.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^5.0.0",
-    "gulp-uglify": "^1.5.3",
-    "jquery": "^2.2.3",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.5.0",
     "jquery-validation": "^1.15.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.14.1"
   }
 }
