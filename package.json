@@ -38,7 +38,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.0",
-    "jquery-validation": "^1.15.0",
+    "jquery-validation": "^1.19.4",
     "node-sass": "^7.0.0"
   }
 }
